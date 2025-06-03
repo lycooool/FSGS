@@ -16,6 +16,8 @@ except ImportError:
 
 import numpy as np
 import os
+os.environ["CUDA_DEVICE_ORDER"]="PCI_BUS_ID"
+os.environ["CUDA_VISIBLE_DEVICES"] = '0'
 import matplotlib.pyplot as plt
 import torch
 from torchmetrics import PearsonCorrCoef
