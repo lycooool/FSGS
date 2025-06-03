@@ -263,7 +263,7 @@ def storePly(path, xyz, rgb):
 def readColmapSceneInfo(path, images, eval, n_views=0, llffhold=8):
     # ply_path = os.path.join(path, "sparse/0/points3D.ply")
     # bin_path = os.path.join(path, "sparse/0/points3D.bin")
-    ply_path = os.path.join(path, str(n_views) + "_views/dense/fused.ply")
+    ply_path = os.path.join(path, "sparse/0/points3D.ply")
 
     try:
         cameras_intrinsic_file = os.path.join(path, "sparse/0", "cameras.bin")

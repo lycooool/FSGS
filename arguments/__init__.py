@@ -12,6 +12,8 @@
 from argparse import ArgumentParser, Namespace
 import sys
 import os
+os.environ["CUDA_DEVICE_ORDER"]="PCI_BUS_ID"
+os.environ["CUDA_VISIBLE_DEVICES"] = '0'
 
 class GroupParams:
     pass
@@ -49,7 +51,7 @@ class ModelParams(ParamGroup):
         self.sh_degree = 3
         self._source_path = ""
         self._model_path = ""
-        self._images = "images_8"
+        self._images = "images"
         self._resolution = -1
         self._white_background = False
         self.data_device = "cuda"
